@@ -3,51 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newbie | Contact Us</title>
+  <title>Newbie | Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              400: '#38b2ac',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-teal-600">Newbie</h1>
-      <nav>
-        <ul class="flex space-x-6 font-medium">
-          <li><a href="index.html" class="hover:text-teal-500">Home</a></li>
-          <li><a href="courses.html" class="hover:text-teal-500">Courses</a></li>
-          <li><a href="profile.html" class="hover:text-teal-500">Profile</a></li>
-          <li><a href="contact.html" class="hover:text-teal-500">Contact</a></li>
-        </ul>
+  <header class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+      <h1 class="text-2xl font-bold">Newbie</h1>
+
+      <!-- Hamburger Icon -->
+      <input type="checkbox" id="menu-toggle" class="hidden peer" />
+      <label for="menu-toggle" class="md:hidden text-3xl cursor-pointer">&#9776;</label>
+
+      <!-- Navigation Links -->
+      <nav class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-gray-800 md:flex md:flex-row md:static md:bg-transparent md:space-x-6">
+        <a href="index.html" class="block px-6 py-2 hover:text-teal-400">Home</a>
+        <a href="courses.html" class="block px-6 py-2 hover:text-teal-400">Courses</a>
+        <a href="profile.html" class="block px-6 py-2 hover:text-teal-400">Profile</a>
+        <a href="contact.html" class="block px-6 py-2 hover:text-teal-400">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Contact Form -->
-  <main class="flex-grow">
-    <section class="max-w-xl mx-auto py-16 px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
-      <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-3 border rounded bg-gray-50" required />
-        <input type="email" placeholder="Your Email" class="w-full p-3 border rounded bg-gray-50" required />
-        <textarea rows="5" placeholder="Your Message" class="w-full p-3 border rounded bg-gray-50" required></textarea>
-        <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded">Send Message</button>
-      </form>
+  <!-- Contact Section -->
+  <section class="py-10 px-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Contact Us</h2>
+    <form class="bg-white shadow rounded p-6 space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded px-4 py-2" />
+      <input type="email" placeholder="Your Email" class="w-full border border-gray-300 rounded px-4 py-2" />
+      <textarea placeholder="Your Message" rows="4" class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+      <button type="submit" class="bg-teal-400 text-white px-6 py-2 rounded hover:bg-teal-500">Send</button>
+    </form>
 
-      <!-- Social Media Icons -->
-      <div class="mt-10 flex justify-center space-x-6 text-2xl text-teal-600">
-        <a href="#" title="Discord"><i class="fab fa-discord hover:text-teal-400"></i></a>
-        <a href="#" title="GitHub"><i class="fab fa-github hover:text-teal-400"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin hover:text-teal-400"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter hover:text-teal-400"></i></a>
-      </div>
-    </section>
-  </main>
+    <!-- Social Icons -->
+    <div class="flex justify-center gap-6 mt-6 text-gray-700 text-2xl">
+      <a href="#" class="hover:text-teal-400"><i class="ph ph-instagram-logo"></i></a>
+      <a href="#" class="hover:text-teal-400"><i class="ph ph-twitter-logo"></i></a>
+      <a href="#" class="hover:text-teal-400"><i class="ph ph-github-logo"></i></a>
+      <a href="#" class="hover:text-teal-400"><i class="ph ph-discord-logo"></i></a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-white text-center py-6 border-t border-gray-200 mt-auto">
-    <p class="text-gray-600">&copy; 2025 Newbie. Let’s Connect and Code.</p>
+  <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+    <p>&copy; 2025 Newbie. Keep Learning.</p>
   </footer>
 
 </body>
