@@ -8,20 +8,28 @@
   </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
 
-  <!-- Navbar -->
-  <header class="bg-white dark:bg-gray-800 shadow">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-teal-600 dark:text-teal-400">Newbie</h1>
-      <nav>
-        <ul class="flex space-x-6 font-medium">
-          <li><a href="index.html" class="hover:text-teal-500">Home</a></li>
-          <li><a href="courses.html" class="hover:text-teal-500">Courses</a></li>
-          <li><a href="profile.html" class="hover:text-teal-500">Profile</a></li>
-          <li><a href="contact.html" class="hover:text-teal-500">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+   <!-- Navbar -->
+    <header class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative md:gap-80">
+  <h1 class="text-2xl font-bold">Newbie</h1>
+
+  <!-- Hamburger Icon -->
+  <input type="checkbox" id="menu-toggle" class="hidden peer" />
+  <label for="menu-toggle" class="md:hidden text-3xl cursor-pointer">&#9776;</label>
+
+  <!-- Navigation Links -->
+  <nav class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-gray-800 md:flex md:flex-row md:static md:bg-transparent">
+    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
+      <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+      <li><a href="courses.html" class="hover:text-teal-400">Courses</a></li>
+      <li><a href="profile.html" class="hover:text-teal-400">Profile</a></li>
+      <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+  
 
   <!-- Hero Section -->
   <section class="bg-cover bg-center h-[90vh] flex items-center justify-center text-white" style="background-image: url('https://source.unsplash.com/1600x900/?programming,technology')">

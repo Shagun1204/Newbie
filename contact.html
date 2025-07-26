@@ -24,21 +24,24 @@
 
   <!-- Navbar -->
   <header class="bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
-      <h1 class="text-2xl font-bold">Newbie</h1>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative md:gap-80">
+  <h1 class="text-2xl font-bold">Newbie</h1>
 
-      <!-- Hamburger Icon -->
-      <input type="checkbox" id="menu-toggle" class="hidden peer" />
-      <label for="menu-toggle" class="md:hidden text-3xl cursor-pointer">&#9776;</label>
+  <!-- Hamburger Icon -->
+  <input type="checkbox" id="menu-toggle" class="hidden peer" />
+  <label for="menu-toggle" class="md:hidden text-3xl cursor-pointer">&#9776;</label>
 
-      <!-- Navigation Links -->
-      <nav class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-gray-800 md:flex md:flex-row md:static md:bg-transparent md:space-x-6">
-        <a href="index.html" class="block px-6 py-2 hover:text-teal-400">Home</a>
-        <a href="courses.html" class="block px-6 py-2 hover:text-teal-400">Courses</a>
-        <a href="profile.html" class="block px-6 py-2 hover:text-teal-400">Profile</a>
-        <a href="contact.html" class="block px-6 py-2 hover:text-teal-400">Contact</a>
-      </nav>
-    </div>
+  <!-- Navigation Links -->
+  <nav class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-gray-800 md:flex md:flex-row md:static md:bg-transparent">
+    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
+      <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+      <li><a href="courses.html" class="hover:text-teal-400">Courses</a></li>
+      <li><a href="profile.html" class="hover:text-teal-400">Profile</a></li>
+      <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
   </header>
 
   <!-- Contact Section -->
