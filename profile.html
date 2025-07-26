@@ -2,16 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Newbie | Profile</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
+  <!-- Navbar -->
   <header class="bg-gray-900 text-white">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Newbie</h1>
-      <nav>
-        <ul class="flex space-x-6">
+      <h1 class="text-2xl font-bold text-teal-400">Newbie</h1>
+
+      <!-- Hamburger Icon -->
+      <input type="checkbox" id="menu-toggle" class="peer hidden">
+      <label for="menu-toggle" class="md:hidden cursor-pointer">
+        <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6 font-medium">
           <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
           <li><a href="courses.html" class="hover:text-teal-400">Courses</a></li>
           <li><a href="profile.html" class="hover:text-teal-400">Profile</a></li>
@@ -19,8 +33,19 @@
         </ul>
       </nav>
     </div>
+
+    <!-- Mobile Nav -->
+    <div class="peer-checked:block hidden md:hidden px-6 pb-4">
+      <ul class="flex flex-col space-y-2 font-medium">
+        <li><a href="index.html" class="hover:text-teal-400">Home</a></li>
+        <li><a href="courses.html" class="hover:text-teal-400">Courses</a></li>
+        <li><a href="profile.html" class="hover:text-teal-400">Profile</a></li>
+        <li><a href="contact.html" class="hover:text-teal-400">Contact</a></li>
+      </ul>
+    </div>
   </header>
 
+  <!-- Profile Section -->
   <main class="max-w-4xl mx-auto px-4 py-10">
     <h2 class="text-3xl font-bold mb-6">Your Profile</h2>
 
@@ -44,6 +69,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-gray-900 text-white text-center py-4">
     <p>&copy; 2025 Newbie. Keep Growing.</p>
   </footer>

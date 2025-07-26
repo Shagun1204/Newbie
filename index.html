@@ -5,51 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Newbie | Learn Programming</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+  <style>
+    /* Toggle for hamburger menu */
+    #menu-toggle:checked ~ #menu {
+      display: block;
+    }
+  </style>
+</head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
 
   <!-- Navbar -->
   <header class="bg-white dark:bg-gray-800 shadow">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-3xl font-bold text-teal-600 dark:text-teal-400">Newbie</h1>
-      <nav>
-        <ul class="flex space-x-6 font-medium">
-          <li><a href="index.html" class="hover:text-teal-500">Home</a></li>
-          <li><a href="courses.html" class="hover:text-teal-500">Courses</a></li>
-          <li><a href="profile.html" class="hover:text-teal-500">Profile</a></li>
-          <li><a href="contact.html" class="hover:text-teal-500">Contact</a></li>
-        </ul>
+
+      <!-- Hamburger (Mobile only) -->
+      <div class="sm:hidden">
+        <input type="checkbox" id="menu-toggle" class="hidden" />
+        <label for="menu-toggle" class="cursor-pointer">
+          <svg class="w-8 h-8 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden sm:flex space-x-6 font-medium">
+        <a href="index.html" class="hover:text-teal-500">Home</a>
+        <a href="courses.html" class="hover:text-teal-500">Courses</a>
+        <a href="profile.html" class="hover:text-teal-500">Profile</a>
+        <a href="contact.html" class="hover:text-teal-500">Contact</a>
       </nav>
     </div>
+
+    <!-- Mobile Navigation -->
+    <nav id="menu" class="hidden sm:hidden px-6 pb-4 space-y-2 font-medium">
+      <a href="index.html" class="block hover:text-teal-500">Home</a>
+      <a href="courses.html" class="block hover:text-teal-500">Courses</a>
+      <a href="profile.html" class="block hover:text-teal-500">Profile</a>
+      <a href="contact.html" class="block hover:text-teal-500">Contact</a>
+    </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-cover bg-center h-[90vh] flex items-center justify-center text-white" style="background-image: url('https://source.unsplash.com/1600x900/?programming,technology')">
-    <div class="bg-black/70 p-10 rounded-lg text-center max-w-2xl">
-      <h2 class="text-5xl font-extrabold mb-4">Start Your Coding Journey</h2>
-      <p class="text-lg mb-6">Newbie is the easiest way to learn programming, build projects, and track your growth. Whether you're a total beginner or want to sharpen your skills — you're in the right place.</p>
-      <a href="courses.html" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full text-lg font-semibold">Let’s Start</a>
+  <section class="bg-cover bg-center min-h-[90vh] flex items-center justify-center text-white px-4 text-center"
+    style="background-image: url('https://source.unsplash.com/1600x900/?programming,technology')">
+    <div class="bg-black/70 p-6 md:p-10 rounded-lg max-w-2xl">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Start Your Coding Journey</h2>
+      <p class="text-base md:text-lg mb-6">Newbie is the easiest way to learn programming, build projects, and track your growth. Whether you're a total beginner or want to sharpen your skills — you're in the right place.</p>
+      <a href="courses.html" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full text-lg font-semibold inline-block">Let’s Start</a>
     </div>
   </section>
 
   <!-- Why Choose Us -->
   <section class="py-16 px-6 bg-white dark:bg-gray-800">
     <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Why Learn with Newbie?</h3>
-      <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 text-lg">
+      <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-white">Why Learn with Newbie?</h3>
+      <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 text-base md:text-lg">
         Our platform is built specifically for beginners. We focus on simplicity, clarity, and real-world practice. You don’t need any prior coding experience. Just start — and we’ll guide you every step of the way.
       </p>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold mb-2">👨‍🏫 Step-by-Step Lessons</h4>
+          <h4 class="text-lg font-semibold mb-2">👨‍🏫 Step-by-Step Lessons</h4>
           <p>We break down each topic so that even a 10th grader can understand it easily.</p>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold mb-2">💡 Hands-On Practice</h4>
+          <h4 class="text-lg font-semibold mb-2">💡 Hands-On Practice</h4>
           <p>Learn by building mini projects after every lesson — HTML pages, CSS layouts, and more.</p>
         </div>
         <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold mb-2">📈 Progress & Certificates</h4>
+          <h4 class="text-lg font-semibold mb-2">📈 Progress & Certificates</h4>
           <p>Track your learning progress, mark tasks complete, and get certificates on completion.</p>
         </div>
       </div>
